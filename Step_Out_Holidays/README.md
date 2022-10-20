@@ -1,1 +1,1 @@
-# Kutch_Arts_Full
+# Kutch_Arts
