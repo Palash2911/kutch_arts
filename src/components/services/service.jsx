@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './product.css';
+import './service.css';
 import ProductData from '../../assets/data/productData';
 import { AiFillCloseCircle } from "react-icons/ai";
 
 
-const Products = () => {
+const Services = () => {
     const [detail, setDetail] = useState([]);
     const [close, setClose] = useState(false);
     const [isBlurred, setIsBlurred] = useState(false);
@@ -44,7 +44,7 @@ const Products = () => {
 
     return (
         <>
-        <div className='Product-items' id='Products'>
+        <div className='Product-items' id='Services'>
             {close ? (
                 <div className='detail_Container'>
                     <div className='detail_Content'>
@@ -84,4 +84,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Services;

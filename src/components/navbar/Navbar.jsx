@@ -5,7 +5,7 @@ import "./nav.css"
 // import logo from '../../assets/images/logo.jpg';
 
 const Navbar = () => {
-    const sections = ['Home', 'AboutUs', 'Services', 'Portfolio', 'ContactUs'];
+    const sections = ['Home', 'About us', 'Services', 'Portfolio', 'Contact us'];
     const [activeLink, setActiveLink] = useState(sections[0]);
 
     const handleSetActive = (section) => {

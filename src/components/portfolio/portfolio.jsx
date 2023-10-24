@@ -4,11 +4,11 @@ import teamsData from '../../assets/data/teamsData';
 import blankImg from '../../assets/images/blank1.png';
 import { AiFillCloseCircle } from "react-icons/ai";
 
-import './vision.css';
+import './portfolio.css';
 
 
 
-const Vision = () => {
+const Portfolio = () => {
     const [team, setteam] = useState([]);
     const [close, setClose] = useState(false);
     const [isBlurred, setIsBlurred] = useState(false);
@@ -26,7 +26,7 @@ const Vision = () => {
 
     return (
         <>
-            <section id="Mission">
+            <section id="Portfolio">
                 <div className='row container-fluid'>
                     <div className='col-lg-6 col-md-12'>
                         <div className='image'>
@@ -85,4 +85,4 @@ const Vision = () => {
     )
 }
 
-export default Vision
+export default Portfolio

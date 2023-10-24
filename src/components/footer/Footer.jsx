@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div>
             <>
-                <div className='footer' id='ContactUs'>
+                <div className='footer' id='Contact us'>
                     <h1>Contact us</h1>
                     <p><strong>Mail</strong> : pharmacarelink@gmail.com</p>
                     <p><strong>Contact no : </strong>+91 77670 43001 / +91 75888 46189</p>

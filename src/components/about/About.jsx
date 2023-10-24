@@ -12,7 +12,7 @@ import './about.css';
 
 const About = () => {
     return (
-        <section id='AboutUs'>
+        <section id='About us'>
             <div className='row about-sec container-fluid'>
                 <div className="col-lg-6 col-md-12">
                     <div className="about-details">

@@ -1,12 +1,12 @@
-import React from 'react';
-import Navbar from './components/navbar/Navbar';
-import Vision from './components/vision/Vision'
-import About from './components/about/About';
-import Footer from './components/footer/Footer';
-import Products from './components/products/Products';
-import { animateScroll as scroll } from 'react-scroll';
-import "./App.css"
-import Home from './components/home/Home';
+import React from "react";
+import { animateScroll as scroll } from "react-scroll";
+import "./App.css";
+import About from "./components/about/About";
+import Footer from "./components/footer/Footer";
+import Home from "./components/home/Home";
+import Navbar from "./components/navbar/Navbar";
+import Portfolio from "./components/portfolio/portfolio";
+import Services from "./components/services/service";
 
 function App() {
   const scrollToTop = () => {
@@ -15,12 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      
       <Navbar scrollToTop={scrollToTop} />
-      <Home/>
-      <Vision />
-      <Products />
+      <Home />
       <About />
+      <Services />
+      <Portfolio />
       <Footer />
     </div>
   );
