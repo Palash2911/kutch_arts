@@ -23,7 +23,7 @@
 
 .card {
   max-width: 70%;
-  margin: auto ;
+  margin: 50px;
   text-align: justify;
   /* font-family: arial; */
   transition: all 0.3s ease-in;

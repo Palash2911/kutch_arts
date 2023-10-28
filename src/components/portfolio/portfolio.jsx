@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import image from '../../assets/images/title-img.jpg';
 import portfolioData from '../../assets/data/portfolioData';
-import blankImg from '../../assets/images/blank1.png';
 import { AiFillCloseCircle } from "react-icons/ai";
 
 import './portfolio.css';
@@ -45,7 +43,7 @@ const Portfolio = () => {
 }
 
             <section id="Teams">
-                <h1 className='feature-head'>Crafting Visions -> Building Dreams -> Delivering Excellence</h1>
+                <h1 className='feature-head'>Crafting Visions -{`>`} Building Dreams -{`>`} Delivering Excellence</h1>
                 <div className={`background ${isBlurred ? 'blur' : ''}`}>
                 <div className="row container-fluid">
                 {portfolioData.map((element,index) => (

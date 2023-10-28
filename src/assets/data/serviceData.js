@@ -26,7 +26,7 @@ const serviceData = [
     id: 4,
     Title: "Logo Designing",
     img: logoDesign,
-    Des: "Elevate your brand's presence with a unique logo and visual identity that conveys your essence and captivates your audience.",
+    Des: "Elevate your brand's presence with a unique logo that conveys your essence and captivates your audience.",
   },
   //   {
   //     id: 5,
