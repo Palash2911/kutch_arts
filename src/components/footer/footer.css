@@ -5,7 +5,10 @@
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.footer h1,p{
+.footer h1 {
+    margin: 30px
+}
+.footer h1,p {
     color: white;
 }
 

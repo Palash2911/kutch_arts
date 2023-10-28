@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import image from '../../assets/images/title-img.jpg';
-import teamsData from '../../assets/data/teamsData';
+import portfolioData from '../../assets/data/portfolioData';
 import blankImg from '../../assets/images/blank1.png';
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -25,28 +25,7 @@ const Portfolio = () => {
 
 
     return (
-        <>
-            <section id="Portfolio">
-                <div className='row container-fluid'>
-                    <div className='col-lg-6 col-md-12'>
-                        <div className='image'>
-                            <img className='title-image' src={image} alt="" />
-                            <img className='blank-img' src={blankImg} alt="" />
-                        </div>
-                    </div>
-                    <div className='col-lg-6 col-md-12'>
-                        <div className='description'>
-                            <h1 className='mission_head'>Mission</h1>
-                            <ul className='mission_list'>
-                                <li className='mission'>Unleash the power of healthy skin through innovative skincare solutions.</li>
-                                <li className='mission'>Revolutionize dermatology care with groundbreaking approaches and technologies</li>
-                                <li className='mission'>Enhance lives by providing effective, reliable solutions for skin conditions</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+        <>  
             {
     close ?
         <div className='team_Container'>
@@ -66,10 +45,10 @@ const Portfolio = () => {
 }
 
             <section id="Teams">
-                <h1 className='feature-head'>Unified Healthcare With Human Centric Approach</h1>
+                <h1 className='feature-head'>Crafting Visions -> Building Dreams -> Delivering Excellence</h1>
                 <div className={`background ${isBlurred ? 'blur' : ''}`}>
                 <div className="row container-fluid">
-                {teamsData.map((element,index) => (
+                {portfolioData.map((element,index) => (
                     <div className="col-lg-3 col-md-3 col-sm-6 features"key={element.id}>
                         <div className="icon_div">
                             <img onClick={() => teamPage(element)} src={element.img} alt="" />

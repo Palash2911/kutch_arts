@@ -17,29 +17,18 @@
     object-fit: scale-down;
 }
 
-  
-  .close{
-    color: white;
-  }
+.card p{
+  color: #000;
+}
 
-  .svg-close{
-    width: 27px;
-    height: 27px;
-  }
-
-  .card p{
-    color: #000;
-  }
-  
-  .card {
-    
-    max-width: 70%;
-    margin: auto ;
-    text-align: justify;
-    /* font-family: arial; */
-    transition: all 0.3s ease-in;
-    padding: 18px;
-  }
+.card {
+  max-width: 70%;
+  margin: auto ;
+  text-align: justify;
+  /* font-family: arial; */
+  transition: all 0.3s ease-in;
+  padding: 18px;
+}
 
   .card button {
     border: none;
