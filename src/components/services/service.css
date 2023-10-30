@@ -25,9 +25,12 @@
   max-width: 70%;
   margin: 50px;
   text-align: justify;
-  /* font-family: arial; */
   transition: all 0.3s ease-in;
-  padding: 18px;
+  padding: 30px 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 15px;
+  border: 2px solid black;
+  transition: all 0.3s ease-in;
 }
 
   .card button {
@@ -35,26 +38,26 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #27A1CE;
+    background-color: #f77f00;
+    font-weight: bold;
     text-align: center;
-    cursor: pointer;
+    cursor: grab;
     width: 100%;
     font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .card h3 {
+    text-align: center;
+    padding: 10px 0px;  
   }
 
   .card:hover{
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-    cursor: context-menu;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
-    transform: scale(1.02);
-    z-index: 1;
+    cursor: grab;
+    border-radius: 25px;
+    transform: scale(1.03);
   }
-  
-  
-  .card button:hover {
-    opacity: 0.7;
-  }
-
 
   .detail_Container{
     position: absolute;

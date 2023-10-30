@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='footer' id='Contact us'>
                     <h1>Contact us</h1>
                     <p><strong>Mail</strong> : rambhiadeepesh@gmail.com</p>
-                    <p><strong>Contact no : </strong>+91 98190 63906 / +91 96191 42911</p>
+                    <p><strong>Contact no : </strong>+91 98190 63906</p>
                     <p>© Copyright KutchArts_2023</p>
                 </div>
             </>

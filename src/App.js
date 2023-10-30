@@ -5,7 +5,6 @@ import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
-import Portfolio from "./components/portfolio/portfolio";
 import Services from "./components/services/service";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <Home />
       <About />
       <Services />
-      <Portfolio />
       <Footer />
     </div>
   );

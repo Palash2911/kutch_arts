@@ -17,7 +17,7 @@ const About = () => {
                 <div className="col-lg-6 col-md-12">
                     <div className="about-details">
                         <h1>About us</h1>
-                        <p>Carelink Pharma, led by dynamic young entrepreneurs, brings fresh energy to the pharmaceutical sector. With deep industry knowledge, technical prowess, and a commitment to quality, we aim to elevate healthcare standards. Collaborating with top-tier manufacturers known for their expertise and facilities, Carelink Pharma ensures precision and adherence to global quality standards. Driven by innovation, Carelink Pharma strives to make a positive impact by delivering forward-thinking pharmaceutical solutions that meet patient and healthcare professional expectations worldwide.</p>
+                        <p>Welcome to Kutch Arts, where creativity meets innovation. We're a team of problem-solvers, dream builders, and excellence enthusiasts. Our mission is clear: to craft your vision into reality. With a passion for what we do, we bring your ideas to life, project by project. At Kutch Arts, we're not just partners; we're your trusted collaborators on the path to success.</p>
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-12">
