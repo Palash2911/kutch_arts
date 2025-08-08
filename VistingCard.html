@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Visiting Card - DZ Marketing</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: black;
+        color: white;
+      }
+
+      .card {
+        width: 360px;
+        height: 240px;
+        perspective: 1200px;
+        cursor: pointer;
+      }
+
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease;
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 14px;
+        backface-visibility: hidden;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+        padding: 20px;
+        padding-bottom: 8px;
+        background: white;
+        color: black;
+      }
+
+      .card-face::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(25deg);
+        animation: shine 6s infinite;
+        pointer-events: none;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-150%) rotate(25deg);
+        }
+        50% {
+          transform: translateX(150%) rotate(25deg);
+        }
+        100% {
+          transform: translateX(150%) rotate(25deg);
+        }
+      }
+
+      /* Front */
+      .card-front {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .front-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .company {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        opacity: 0.7;
+        margin-top: 2px;
+      }
+
+      .logo {
+        background: black;
+        color: white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 22px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .name-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        transform: translateY(-8px);
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .role {
+        font-size: 14px;
+        opacity: 0.75;
+      }
+
+      .phone {
+        font-size: 14px;
+        margin-top: 6px;
+      }
+
+      .front-footer {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 8px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        color: rgb(76, 76, 76);
+        font-style: italic;
+      }
+
+      /* Back */
+      .card-back {
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .contact-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .contact {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .services {
+        margin-top: 14px;
+      }
+
+      .services-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .services-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 14px;
+        font-size: 12px;
+      }
+
+      .footer-contact {
+        text-align: center;
+        font-size: 14px;
+        padding-top: 6px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      /* Flip Button */
+      #flipBtn {
+        margin-top: 70px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        background: white;
+        color: black;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      #flipBtn:hover {
+        background: #e5e5e5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="card">
+      <div class="card-inner" id="card-inner">
+        <!-- Front -->
+        <div class="card-face card-front">
+          <div class="front-header">
+            <div>
+              <div class="company">DZ Marketing</div>
+              <div class="subtitle">Turning Clicks into Clients</div>
+            </div>
+            <div class="logo">DZ</div>
+          </div>
+          <div class="name-block">
+            <div class="name">Deepesh Rambhia</div>
+            <div class="role">Founder / CEO</div>
+            <div class="phone">📞 +91 98190 63906</div>
+          </div>
+          <div class="front-footer">❝ We Make Brands Unstoppable ❞</div>
+        </div>
+
+        <!-- Back -->
+        <div class="card-face card-back">
+          <div>
+            <div class="contact-title">Contact</div>
+            <div class="contact">
+              <div>📧 rambhiadeepesh@gmail.com</div>
+              <div>📞 +91 98190 63906</div>
+              <div>📍 Mumbai, India</div>
+            </div>
+            <div class="services">
+              <div class="services-title">Services</div>
+              <div class="services-list">
+                <div>⚡ SEO & SEM</div>
+                <div>⚡ Branding & Design</div>
+                <div>⚡ Social Media Management</div>
+                <div>⚡ Paid Ad Campaigns</div>
+                <div>⚡ Email Marketing</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="footer-contact">📞 +91 98190 63906</div> -->
+        </div>
+      </div>
+    </div>
+
+    <button id="flipBtn">Flip Card</button>
+
+    <script>
+      const card = document.getElementById("card");
+      const cardInner = document.getElementById("card-inner");
+      const flipBtn = document.getElementById("flipBtn");
+
+      let isFlipped = false;
+      let rotateX = 0;
+      let rotateY = 0;
+
+      // Flip button
+      flipBtn.addEventListener("click", () => {
+        isFlipped = !isFlipped;
+        updateTransform();
+      });
+
+      // Tilt effect
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        rotateX = ((y - centerY) / centerY) * -10;
+        rotateY = ((x - centerX) / centerX) * 12;
+        updateTransform();
+      });
+
+      card.addEventListener("mouseleave", () => {
+        rotateX = 0;
+        rotateY = 0;
+        updateTransform();
+      });
+
+      function updateTransform() {
+        cardInner.style.transform = `rotateX(${rotateX}deg) rotateY(${
+          rotateY + (isFlipped ? 180 : 0)
+        }deg)`;
+      }
+    </script>
+  </body>
+</html>
